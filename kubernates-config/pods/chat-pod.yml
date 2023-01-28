@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: chat-app
+  labels:
+    app: chat
+spec:
+  containers:
+    - name: backend
+      image: ishimaa/chat_backend
+      ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: chat-app
+  labels:
+    app: chat
+spec:
+  containers:
+    - name: frontend
+      image: ishimaa/chat_frontend
+      ports:
+        - containerPort: 80
