@@ -15,14 +15,15 @@ spec:
       containers:
         - name: frontend
           image: ishimaa/chat_frontend
+          imagePullPolicy: Always
           ports:
           - containerPort: 80
-          env:
-            - name: BACKEND_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: configmap
-                  key: backend
+          # env:
+          #   - name: BACKEND_URL
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: configmap
+          #         key: backend
 
 ---
 apiVersion: v1

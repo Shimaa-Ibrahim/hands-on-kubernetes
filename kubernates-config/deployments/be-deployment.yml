@@ -15,6 +15,7 @@ spec:
       containers:
       - name: backend
         image: ishimaa/chat_backend
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
